@@ -23,7 +23,7 @@ Authorization: Basic base64(username:)
 200 OK
 ```
 
-#### Response if user does not exists
+#### Response if user does not exist
 
 ```
 404 Not Found
@@ -31,7 +31,7 @@ Authorization: Basic base64(username:)
 
 ### User Verification endpoint
 
-The user verification endpoint returns a signed [JSON Web Tokens](http://jwt.io) if the (username, password) pairs matches. If the match fails, it returns an error message indicating the failure.
+The user verification endpoint returns a signed [JSON Web Tokens](http://jwt.io) if the (username, password) pair matches. If the match fails, it returns an error message indicating the failure.
 
 #### Request
 
