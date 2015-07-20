@@ -10,7 +10,7 @@ Details about how to implement the JWT auth protocol can be found in the PROTOCO
 ## To run the example server via Docker:
 
 ```
-docker run -ti -p 5000:5000 quay.io/coreos/jwt-auth-example
+docker run -ti -p 6000:6000 quay.io/coreos/jwt-auth-example
 ```
 
 ## To run the example server directly:
@@ -22,7 +22,7 @@ python application.py
 ## To test the example server with `curl`:
 
 ```
-curl --user cooluser:password http://localhost:5000/user/exists
-curl --user cooluser:password http://localhost:5000/user/verify
+curl --user cooluser:password http://localhost:6000/user/exists
+curl --user cooluser:password http://localhost:6000/user/verify
 ```
 

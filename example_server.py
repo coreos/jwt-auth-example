@@ -79,7 +79,7 @@ app.config['DEBUG'] = True
 
 
 def run_example_server():
-  app.run(port=5000, debug=True, threaded=True, host='0.0.0.0')
+  app.run(port=6000, debug=True, threaded=True, host='0.0.0.0')
 
 if __name__ == '__main__':
   run_example_server()
