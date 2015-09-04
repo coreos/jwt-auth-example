@@ -53,7 +53,8 @@ def verify_user():
       # Note that all these fields are required:
       #  iss - The issuer, which should match that defined in your configuration
       #  aud - Must be 'quay.io/jwtauthn'
-      #  nbf - The current time when the token was minted
+      #  iat - The current time when the token was minted (Issued At time)
+      #  nbf - The current time when the token was minted (Not Before time)
       #  exp - The time when token expires. Must not be greater than five minutes from now.
       #  sub - The user's username.
       #  email - The user's e-mail address.
@@ -61,6 +62,7 @@ def verify_user():
         'iss': 'authy',
         'aud': 'quay.io/jwtauthn',
         'nbf': datetime.utcnow(),
+        'iat': datetime.utcnow(),
         'exp': datetime.utcnow() + timedelta(seconds=60),
         'sub': user['username'],
         'email': user['email']

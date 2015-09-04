@@ -61,6 +61,7 @@ Example:
   'iss': 'authy',
   'aud': 'quay.io/jwtauthn',
   'nbf': datetime.utcnow(),
+  'iat': datetime.utcnow(),
   'exp': datetime.utcnow() + timedelta(seconds=60),
   'sub': 'usernamehere',
   'email': 'email@address.com'
@@ -72,6 +73,7 @@ Example:
 | iss    | The issuer of this token. Must match that defined in the Quay.io config       |
 | aud    | The intended audience for the token. Must be 'quay.io/jwtauthn'               |
 | nbf    | The time before which the token is not valid. UTC Now, in seconds since epoch |
+| iat    | The time at which the token was issued. UTC Now, in seconds since epoch       |
 | exp    | When the token expires. No later than UTC Now + 300 seconds (since epoch)     |
 | sub    | The username for the verified user.                                           |
 | email  | The e-mail address of the verified user.                                      |
