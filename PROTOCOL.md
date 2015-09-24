@@ -4,30 +4,7 @@ The Quay.io JWT Authentication system allows clients to implement their own cust
 
 ### Required Endpoints
 
-JWT authentication requires two endpoints: one for checking whether a username/e-mail address exists, and one for verifying a (username_or_email, password) pair. Both endpoints make use of *HTTP basic authorization* for passing credentials via the `Authorization` header.
-
-### User Exists endpoint
-
-The user exists endpoint returns whether the specified username/e-mail address exists.
-
-#### Request
-
-```
-GET /user/exists/endpoint
-Authorization: Basic base64(username:)
-```
-
-#### Response if user exists
-
-```
-200 OK
-```
-
-#### Response if user does not exist
-
-```
-404 Not Found
-```
+JWT authentication requires one endpoint for verifying a (username_or_email, password) pair. The endpoint makes use of *HTTP basic authorization* for passing credentials via the `Authorization` header.
 
 ### User Verification endpoint
 
@@ -36,7 +13,7 @@ The user verification endpoint returns a signed [JSON Web Tokens](http://jwt.io)
 #### Request
 
 ```
-GET /user/verify/endpoint
+GET /your/user/verify/endpoint
 Authorization: Basic base64(username:password)
 ```
 
